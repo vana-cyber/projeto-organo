@@ -1,13 +1,21 @@
-import { Banner } from './componentes/Banner/Banner';
+import { useState } from 'react';
+import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
-import Botao from './componentes/Botao';
+import Rodape from './componentes/Rodape';
 
-function App() {
+function App() { //no App.jsx é que roda toda a aplicação de fato
+
+  const [colaboradores, setColaboradores] = useState([])
+
+  const aoNovoColaboradorAdicionado = (colaborador) => {
+    setColaboradores([...colaboradores, colaborador]) //adiciona um novo colaborador
+  }
+
   return (
     <div className="App">
       <Banner />
-      <Formulario />
-      <Botao texto="Criar card"/>
+      <Formulario aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
+      <Rodape />
     </div>
   );
 }

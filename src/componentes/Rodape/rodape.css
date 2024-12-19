@@ -1,0 +1,35 @@
+css
+/* src/componentes/Rodape/rodape.css */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #6278F7;
+    color: #FFF;
+    padding: 5rem;
+    justify-content: space-between;
+}
+
+.redes-sociais img {
+    display: flex;
+    align-items: center;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.footer ul li:last-child {
+    margin-right: 0;
+}
+
+
+/* align .redes-sociais to the bottom left corner of the screen */
+.redes-sociais {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+}
